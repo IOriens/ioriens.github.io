@@ -46,7 +46,7 @@
 
     .header {
       /* color: #444; */
-      font-size: 26px;
+      font-size: 30px;
       margin-bottom: 14px;
     }
 
@@ -95,13 +95,18 @@
       color: #999;
       /* margin-top: 20px; */
     }
+
+    .revisit {
+      position: fixed;
+      bottom: 0
+    }
   </style>
 </head>
 
 <body>
   <div class="header">
-    <div class="avatar"></div>
-    <p>Junjie Ding</p>
+    <div class="avatar"  onclick="getHistory()"></div>
+    <p>Junjie</p>
   </div>
   <div class="content">
     <h3>Works</h3>
@@ -111,11 +116,11 @@
         <span> Share code </span>
         <a href="https://github.com/IOriens">@Github</a>
       </li>
-      <li>
+      <!-- <li>
         <img src="assets/blog.png" alt="blog">
         <span> Lazy blogger </span>
         <a href="https://ioriens.coding.me/IOriens/">@Coding</a>
-      </li>
+      </li> -->
       <li>
         <img src="assets/github.png" alt="github">
         <span> Share notes, also </span>
@@ -127,17 +132,17 @@
     <ul>
       <li>
         <img src="assets/twitter.png" alt="Twitter">
-        <span> Share thought </span>
+        <span> Share thoughts </span>
         <a href="https://twitter.com/I_Oriens">@Twitter</a>
       </li>
       <li>
         <img src="assets/instagram.png" alt="instagram">
-        <span> Share photo </span>
+        <span> Share photos </span>
         <a href="https://www.instagram.com/junjie2017/">@Instagram</a>
       </li>
       <li>
         <img src="assets/bilibili.png" alt="bilibili">
-        <span> Share viedo </span>
+        <span> Share videos </span>
         <a href="https://space.bilibili.com/2019807">@Bilibili</a>
       </li>
     </ul>
@@ -155,6 +160,70 @@
   <div class="footer">Inspired by
     <a href="https://brian.io/">brian</a>
   </div>
-</body>
 
+
+  <script>
+
+    if (!Array.isArray) {
+      Array.isArray = function (arg) {
+        return Object.prototype.toString.call(arg) === '[object Array]';
+      };
+    }
+
+    var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    var Log = function () {
+      function Log() {
+        _classCallCheck(this, Log);
+      }
+
+      _createClass(Log, null, [{
+        key: 'set',
+        value: function set(key, value) {
+          if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) != 'object') {
+            localStorage.setItem(this.magicKey + key, value);
+          } else {
+            localStorage.setItem(this.magicKey + key, JSON.stringify(value));
+          }
+        }
+      }, {
+        key: 'get',
+        value: function get(key) {
+          var ret = localStorage.getItem(this.magicKey + key);
+          try {
+            ret = JSON.parse(ret);
+          } catch (e) { }
+          return ret;
+        }
+      }]);
+
+      return Log;
+    }();
+
+    Log.magicKey = 'hello';
+
+    let logKey = 'logging'
+    var logs = Log.get(logKey) || []
+
+    var curr = new Date()
+    console.log(logs, curr)
+    if (Array.isArray(logs)) {
+      console.log(logs, curr)
+      Log.set(logKey, logs.concat(curr))
+      console.log(Log.get(logKey))
+    } else {
+      Log.set(logKey, [curr])
+    }
+
+
+    function getHistory() {
+      alert('该设备是第'+ Log.get(logKey).length +'次访问本网页')
+    }
+
+  </script>
+</body>
 </html>
