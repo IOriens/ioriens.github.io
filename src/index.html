@@ -101,11 +101,21 @@
       bottom: 0
     }
   </style>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?25293f122e5e55f82bfd536fbf0a07f8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 </head>
 
 <body>
   <div class="header">
-    <div class="avatar"  onclick="getHistory()"></div>
+    <!-- <div class="avatar" onclick="getHistory()"></div> -->
+    <img src="assets/avatar.jpg" class="avatar"  onclick="getHistory()" alt="github">
     <p>Junjie</p>
   </div>
   <div class="content">
@@ -221,9 +231,10 @@
 
 
     function getHistory() {
-      alert('该设备是第'+ Log.get(logKey).length +'次访问本网页')
+      alert('该设备是第' + Log.get(logKey).length + '次访问本网页')
     }
 
   </script>
 </body>
+
 </html>
