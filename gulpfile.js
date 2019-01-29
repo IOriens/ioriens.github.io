@@ -4,9 +4,9 @@ const browserSync = require('browser-sync').create()
 const jsonminify = require('gulp-jsonminify')
 const img64Html = require('gulp-img64-html')
 
-const commonTasks = ['html', 'json', 'assets']
 
-gulp.task('html', function () {
+
+function html() {
   return gulp
     .src('src/index.html')
     .pipe(
@@ -24,28 +24,31 @@ gulp.task('html', function () {
     )
     .pipe(gulp.dest('.', { overwrite: true }))
     .pipe(browserSync.stream())
-})
+}
 
-gulp.task('json', function () {
+function json() {
   return gulp
     .src('./src/*.json')
     .pipe(jsonminify())
     .pipe(gulp.dest('.'))
     .pipe(browserSync.stream())
-})
+}
 
-gulp.task('assets', function () {
-  gulp.src('./src/assets/**').pipe(gulp.dest('assets'))
-})
+function assets() {
+  return gulp.src('./src/assets/**').pipe(gulp.dest('assets'))
+}
 
-gulp.task('dev', commonTasks, function () {
+
+exports.html = html
+exports.json = json
+exports.assets = assets
+exports.dev = gulp.series(html, json, assets, function () {
   browserSync.init({
     server: './'
   })
-  gulp.watch('src/*.html', ['html'])
-  gulp.watch('src/*.json', ['json'])
+  gulp.watch('src/*.html', html)
+  gulp.watch('src/*.json', json)
 })
 
-gulp.task('build', commonTasks)
+exports.default = exports.build = gulp.parallel(html, json, assets)
 
-gulp.task('default', ['build'])
