@@ -2,16 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Global Site Tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82267837-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-82267837-1');
-  </script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <title>Junjie Ding</title>
@@ -101,21 +91,23 @@
       bottom: 0
     }
   </style>
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82267837-1"></script>
+  <meta name="baidu-site-verification" content="C3WfF7hGfH" />
   <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?25293f122e5e55f82bfd536fbf0a07f8";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-82267837-1');
   </script>
 </head>
 
 <body>
   <div class="header">
     <!-- <div class="avatar" onclick="getHistory()"></div> -->
-    <img src="assets/avatar.jpg" class="avatar"  onclick="getHistory()" alt="github">
+    <img src="assets/avatar.jpg" class="avatar" onclick="getHistory()" alt="github">
     <p>Junjie</p>
   </div>
   <div class="content">
@@ -161,7 +153,7 @@
     <ul>
       <li>
         <img src="assets/weidian.png" alt="weidian">
-        <span> FE Developer </span>
+        <span> Developer </span>
         <a href="https://www.weidian.com/">@Weidian</a>
       </li>
     </ul>
@@ -171,69 +163,31 @@
     <a href="https://brian.io/">brian</a>
   </div>
 
-
+  <!-- Baidu Analytics -->
   <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?25293f122e5e55f82bfd536fbf0a07f8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
-    if (!Array.isArray) {
-      Array.isArray = function (arg) {
-        return Object.prototype.toString.call(arg) === '[object Array]';
-      };
-    }
-
-    var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-    var Log = function () {
-      function Log() {
-        _classCallCheck(this, Log);
+  <!-- Baidu Site Report -->
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
       }
-
-      _createClass(Log, null, [{
-        key: 'set',
-        value: function set(key, value) {
-          if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) != 'object') {
-            localStorage.setItem(this.magicKey + key, value);
-          } else {
-            localStorage.setItem(this.magicKey + key, JSON.stringify(value));
-          }
-        }
-      }, {
-        key: 'get',
-        value: function get(key) {
-          var ret = localStorage.getItem(this.magicKey + key);
-          try {
-            ret = JSON.parse(ret);
-          } catch (e) { }
-          return ret;
-        }
-      }]);
-
-      return Log;
-    }();
-
-    Log.magicKey = 'hello';
-
-    let logKey = 'logging'
-    var logs = Log.get(logKey) || []
-
-    var curr = new Date()
-    console.log(logs, curr)
-    if (Array.isArray(logs)) {
-      console.log(logs, curr)
-      Log.set(logKey, logs.concat(curr))
-      console.log(Log.get(logKey))
-    } else {
-      Log.set(logKey, [curr])
-    }
-
-
-    function getHistory() {
-      alert('该设备是第' + Log.get(logKey).length + '次访问本网页')
-    }
-
+      else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
   </script>
 </body>
 
