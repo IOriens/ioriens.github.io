@@ -1,193 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+    <title>Junjie Ding</title>
+    <link rel="shortcut icon" type="image/png" href="assets/avatar.jpg" />
+    <link rel="canonical" href="https://ioriens.com/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Junjie's links, 丁俊杰的个人导航站" />
+    <meta
+      name="keywords"
+      content="Junjie Ding,丁俊杰,Junjie,JavaScript,俊杰,DingJunjie,junjie,dingjunjie,junjieding,前端,开发者,hera,小程序,Developer"
+    />
+    <meta name="author" content="Junjie Ding" />
+    <meta name="theme-color" content="#C1D7E4" />
+    <link rel="manifest" href="manifest.json" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        /* font-family: "Comic Sans MS", cursive, sans-serif; */
+      }
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-  <title>Junjie Ding</title>
-  <link rel="shortcut icon" type="image/png" href="assets/avatar.jpg" />
-  <link rel="canonical" href="https://ioriens.com/" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Junjie's links, 丁俊杰的个人导航站">
-  <meta name="keywords" content="Junjie Ding,丁俊杰,Junjie,JavaScript,俊杰,DingJunjie,junjie,dingjunjie,junjieding,前端,开发者,hera,小程序,Developer">
-  <meta name="author" content="Junjie Ding">
-  <meta name="theme-color" content="#C1D7E4" />
-  <link rel="manifest" href="manifest.json">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Trebuchet MS", Helvetica, sans-serif;
-      /* font-family: "Comic Sans MS", cursive, sans-serif; */
-    }
+      body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-    body {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+      a {
+        color: #0076ca;
+        text-decoration: none;
+      }
 
-    a {
-      color: #0076CA;
-      text-decoration: none;
-    }
+      .header {
+        /* color: #444; */
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
 
-    .header {
-      /* color: #444; */
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
+      .avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 4px;
+        background-color: #55c5ea;
+        margin-bottom: 8px;
+      }
 
-    .avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 4px;
-      background-color: #55C5EA;
-      margin-bottom: 8px;
-    }
+      .content h3 {
+        color: #333;
+        font-size: 18px;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+      }
 
-    .content h3 {
-      color: #333;
-      font-size: 18px;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
+      .content ul {
+        list-style: none;
+        margin-left: -2px;
+        margin-bottom: 10px;
+      }
 
-    .content ul {
-      list-style: none;
-      margin-left: -2px;
-      margin-bottom: 10px;
-    }
+      .content ul li {
+        color: #444;
+        width: 14em;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 400;
+      }
 
-    .content ul li {
-      color: #444;
-      width: 14em;
-      padding: 5px;
-      font-size: 16px;
-      font-weight: 400;
-    }
+      .content li img {
+        width: 18px;
+        margin-top: -2px;
+        vertical-align: middle;
+      }
 
-    .content li img {
-      width: 18px;
-      margin-top: -2px;
-      vertical-align: middle;
-    }
+      .content li a,
+      .content li span {
+        vertical-align: middle;
+        line-height: 22px;
+      }
 
-    .content li a,
-    .content li span {
-      vertical-align: middle;
-      line-height: 22px;
-    }
+      .footer {
+        color: #999;
+        /* margin-top: 20px; */
+      }
 
-    .footer {
-      color: #999;
-      /* margin-top: 20px; */
-    }
+      .revisit {
+        position: fixed;
+        bottom: 0;
+      }
+    </style>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-82267837-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'UA-82267837-1')
+    </script>
+    <meta name="baidu-site-verification" content="C3WfF7hGfH" />
+  </head>
 
-    .revisit {
-      position: fixed;
-      bottom: 0
-    }
-  </style>
-  <!-- Global Site Tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82267837-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-82267837-1');
-  </script>
-  <meta name="baidu-site-verification" content="C3WfF7hGfH" />
-</head>
-
-<body>
-  <div class="header">
-    <img src="assets/avatar.jpg" class="avatar" alt="github">
-    <p>Junjie Ding</p>
-  </div>
-  <div class="content">
-    <h3>Coding</h3>
-    <ul>
-      <li>
-        <img src="assets/github.png" alt="github">
-        <span> Share code </span>
-        <a href="https://github.com/IOriens">@Github</a>
-      </li>
-      <!-- <li>
+  <body>
+    <div class="header">
+      <img src="assets/avatar.jpg" class="avatar" alt="github" />
+      <p>Junjie Ding</p>
+    </div>
+    <div class="content">
+      <h3>Coding</h3>
+      <ul>
+        <li>
+          <img src="assets/github.png" alt="github" />
+          <span> Share code </span>
+          <a href="https://github.com/IOriens">@Github</a>
+        </li>
+        <!-- <li>
         <img src="assets/blog.png" alt="blog">
         <span> Lazy blogger </span>
         <a href="https://ioriens.coding.me/IOriens/">@Coding</a>
       </li> -->
-      <li>
-        <img src="assets/github.png" alt="github">
-        <span> Share notes, also </span>
-        <a href="https://github.com/IOriens/ioriens.github.io/issues">@Github</a>
-      </li>
-    </ul>
+        <li>
+          <img src="assets/github.png" alt="github" />
+          <span> Share notes, also </span>
+          <a href="https://github.com/IOriens/ioriens.github.io/issues"
+            >@Github</a
+          >
+        </li>
+      </ul>
 
-    <h3>Living</h3>
-    <ul>
-      <li>
-        <img src="assets/twitter.png" alt="Twitter">
-        <span> Share thoughts </span>
-        <a href="https://twitter.com/I_Oriens">@Twitter</a>
-      </li>
-      <li>
-        <img src="assets/instagram.png" alt="instagram">
-        <span> Share photos </span>
-        <a href="https://www.instagram.com/junjie.xyz/">@Instagram</a>
-      </li>
-      <li>
-        <img src="assets/bilibili.png" alt="bilibili">
-        <span> Share videos </span>
-        <a href="https://space.bilibili.com/2019807">@Bilibili</a>
-      </li>
-    </ul>
+      <h3>Living</h3>
+      <ul>
+        <li>
+          <img src="assets/twitter.png" alt="Twitter" />
+          <span> Share thoughts </span>
+          <a href="https://twitter.com/I_Oriens">@Twitter</a>
+        </li>
+        <li>
+          <img src="assets/instagram.png" alt="instagram" />
+          <span> Share photos </span>
+          <a href="https://www.instagram.com/junjie.xyz/">@Instagram</a>
+        </li>
+        <li>
+          <img src="assets/bilibili.png" alt="bilibili" />
+          <span> Share videos </span>
+          <a href="https://space.bilibili.com/2019807">@Bilibili</a>
+        </li>
+      </ul>
 
-    <h3>Working</h3>
-    <ul>
-      <li>
-        <img src="assets/weidian.png" alt="weidian">
-        <span> Developer </span>
-        <a href="https://www.weidian.com/">@Weidian</a>
-      </li>
-    </ul>
+      <h3>Working</h3>
+      <ul>
+        <li>
+          <img src="assets/weidian.png" alt="weidian" />
+          <span> Developer </span>
+          <a href="https://www.weidian.com/">@Weidian</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer">
+      Inspired by
+      <a href="https://brian.io/">brian</a>
+    </div>
 
-  </div>
-  <div class="footer">Inspired by
-    <a href="https://brian.io/">brian</a>
-  </div>
+    <!-- Baidu Analytics -->
+    <script>
+      var _hmt = _hmt || []
+      ;(function() {
+        var hm = document.createElement('script')
+        hm.src = 'https://hm.baidu.com/hm.js?1e415f3a9200edffb8566fbeee4b669f'
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(hm, s)
+      })()
+    </script>
 
-  <!-- Baidu Analytics -->
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?25293f122e5e55f82bfd536fbf0a07f8";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-  <!-- Baidu Site Report -->
-  <script>
-    (function () {
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      }
-      else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-</body>
-
+    <!-- Baidu Site Report -->
+    <script>
+      ;(function() {
+        var bp = document.createElement('script')
+        var curProtocol = window.location.protocol.split(':')[0]
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+        }
+        var s = document.getElementsByTagName('script')[0]
+        s.parentNode.insertBefore(bp, s)
+      })()
+    </script>
+  </body>
 </html>
